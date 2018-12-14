@@ -1,5 +1,9 @@
 import random
-r = random.randint(1, 100)
+start = input('請輸入開始值: ')
+end = input('請輸入結束值: ')
+start = int(start)
+end = int(end)
+r = random.randint(start, end)
 count = 0
 while True:
 	count += 1
@@ -8,12 +12,14 @@ while True:
 	if num == r:
 		print('終於猜對了! ')
 		break
-	else:
-		if num > r:
-			print('太大囉')
-		else :
-			print('太小囉')
+	elif num > r:
+		print('太大囉')
+	elif num < r:
+		print('太小囉')
 	
 print('這是你猜的第', count, '次')	
+
+
+# 能顯示出幾到幾
 
 
